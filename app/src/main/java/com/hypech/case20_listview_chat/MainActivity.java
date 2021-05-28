@@ -38,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
                 String content = inputText.getText().toString();
                 if (!"".equals(content)) {
-                    ChatData msg = new ChatData(content, ChatData.TYPE_SENT);
-                    msgList.add(msg);
+                    ChatData msg1 = new ChatData(content, ChatData.TYPE_SENT);
+                    ChatData msg2 = new ChatData("I didn’t think so. You don’t like them. You don’t really know why you don’t like them. All you know is you find them repulsive. Consequently, a German soldier conducts a search of a house suspected of hiding Jews. Where does the hawk look? ", ChatData.TYPE_RECEIVED);
+                    msgList.add(msg1);
+                    msgList.add(msg2);
                     adapter.notifyDataSetChanged();             // refresh ListView when new messages coming
                     msgListView.setSelection(msgList.size());   // go to the end of the ListView
                     inputText.setText("");
@@ -49,13 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initMsgs() {
-        ChatData msg1 = new ChatData("Are you OK? Dan.", ChatData.TYPE_RECEIVED);
+        ChatData msg1 = new ChatData("If a rat were to walk in here right now as I’m talking, would you treat it to a saucer of your delicious milk?", ChatData.TYPE_RECEIVED);
         msgList.add(msg1);
-        ChatData msg2 = new ChatData("Hi, It's Dan. Who are you?", ChatData.TYPE_SENT);
-        msgList.add(msg2);
-        ChatData msg3 = new ChatData("I'm Lei Jun, your boss :)I'm Lei Jun, your boss :)I'm Lei Jun, your boss :)I'm Lei Jun, your boss :)I'm Lei Jun, your boss :)I'm Lei Jun, your boss :)", ChatData.TYPE_RECEIVED);
-        msgList.add(msg3);
-        ChatData msg4 = new ChatData("Nice to meet you, boss :( I'm Lei Jun, your boss :)I'm Lei Jun, your boss :)I'm Lei Jun, your boss :)I'm Lei Jun, your boss :)", ChatData.TYPE_SENT);
-        msgList.add(msg4);
     }
 }
