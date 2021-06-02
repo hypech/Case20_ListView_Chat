@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.hypech.case83_listview"
+        applicationId "com.hypech.case20_listview_chat"
         minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
